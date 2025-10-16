@@ -1,0 +1,82 @@
+{
+  "title": "Astro Photography",
+  "subtitle": "Come on a cosmic adventure between science and Andean Cosmovision",
+  "description": "In the heart of the world's driest desert, we invite you to a dual experience: a journey through the visible universe with cutting‑edge science and a connection to the cosmos through ancestral wisdom. We don't sell tours, we offer a connection.",
+  "experience": {
+    "title": "Two Perspectives, One Sky",
+    "science_title": "The Scientific Promise",
+    "science_description": "Equipped with 16‑inch telescopes, our expert guides will take you on a rigorous and fascinating tour. Observe the dance of Jupiter’s moons, Saturn’s rings, and the nebulae where stars are born. Understand the cosmos with the clarity that only Atacama can provide.",
+    "ancestral_title": "The Ancestral Connection",
+    "ancestral_description": "Beyond science, Atacama’s sky is a map of stories. Our local guides will share the Andean Cosmovision, teaching you to read the constellations that guided their ancestors. It’s an invitation to feel the universe, not just observe it."
+  },
+  "cta": "Start Your Cosmic Journey",
+  "cta_title": "Ready for Your Cosmic Adventure?",
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "tours": "Tours",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "A Gateway to the Universe",
+    "content": "San Pedro de Atacama is not just a destination; it's a global epicenter for astrotourism. With over 300 clear nights a year, a privileged altitude, and a strict Luminous Standard that protects its skies, we offer a pristine window to the cosmos. Here, the science of cutting-edge observatories and ancient Andean wisdom come together to provide an unforgettable experience.",
+    "stats": {
+      "nights": ">300",
+      "nights_label": "Clear Nights / Year",
+      "altitude": ">2,400m",
+      "altitude_label": "Above Sea Level",
+      "telescopes": "16''",
+      "telescopes_label": "Professional Telescopes"
+    }
+  },
+  "tours": {
+    "title": "Our Cosmic Experiences",
+    "premium": {
+      "title": "Premium Scientific Tour",
+      "description": "A deep dive into the cosmos with a scientific focus and luxury comfort.",
+      "features": {
+        "0": "Observation with 16-inch telescopes",
+        "1": "Expert astronomy guide",
+        "2": "Professional portrait astrophotography",
+        "3": "Glass of wine and premium catering",
+        "4": "Small and exclusive groups"
+      }
+    },
+    "cultural": {
+      "title": "Andean Cosmovision Tour",
+      "description": "Connect with the universe through the wisdom of the native peoples.",
+      "features": {
+        "0": "Interpretation of the sky according to the Lickanantay culture",
+        "1": "Ancestral stories and legends",
+        "2": "Naked-eye observation of Andean constellations",
+        "3": "Hot beverages and local snacks",
+        "4": "Guided by members of the local community"
+      }
+    }
+  },
+  "gallery": {
+    "title": "Your Digital Memory of the Cosmos",
+    "subtitle": "Astrophotography is the heart of our experience. You don't just take a memory with you; you become part of Atacama's stellar landscape."
+  },
+  "footer": {
+    "location": "San Pedro de Atacama, Chile",
+    "rights": "All rights reserved.",
+    "contact": "Contact Us"
+  },
+  "calendar": {
+    "title": "Lunar Calendar for Observation",
+    "section_title": "Plan Your Perfect Night",
+    "description": "The best nights for stargazing are close to the New Moon. Use our calendar to find the darkest skies and book your tour.",
+    "optimal_day": "Optimal Night",
+    "weekdays": {
+      "sun": "Sun", 
+      "mon": "Mon", 
+      "tue": "Tue", 
+      "wed": "Wed", 
+      "thu": "Thu", 
+      "fri": "Fri", 
+      "sat": "Sat"
+    }
+  }
+}

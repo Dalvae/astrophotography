@@ -1,0 +1,82 @@
+{
+  "title": "Astro Photograpy",
+  "subtitle": "¡Ven a una aventura cósmica entre la ciencia y la cosmovisión andina!",
+  "description": "En el corazón del desierto más árido del mundo, te invitamos a una experiencia dual: un viaje por el universo visible a través de la ciencia más avanzada y un encuentro con el cosmos a través de la sabiduría ancestral. No vendemos tours, ofrecemos una conexión.",
+  "experience": {
+    "title": "Dos Miradas, Un Mismo Cielo",
+    "science_title": "La Promesa Científica",
+    "science_description": "Equipados con telescopios de 16 pulgadas, nuestros guías expertos te llevarán por un recorrido riguroso y fascinante. Observa la danza de las lunas de Júpiter, los anillos de Saturno y las nebulosas donde nacen las estrellas. Entiende el cosmos con la claridad que solo Atacama puede ofrecer.",
+    "ancestral_title": "La Conexión Ancestral",
+    "ancestral_description": "Más allá de la ciencia, el cielo de Atacama es un mapa de historias. Nuestros guías locales compartirán la Cosmovisión Andina, enseñándote a leer las constelaciones que guiaron a sus ancestros. Es una invitación a sentir el universo, no solo a observarlo."
+  },
+  "cta": "Comienza tu Viaje Cósmico",
+  "cta_title": "¿Listo para tu Aventura Cósmica?",
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "tours": "Tours",
+    "gallery": "Galería",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Un Portal al Universo",
+    "content": "San Pedro de Atacama no es solo un destino, es un epicentro mundial de astroturismo. Gracias a sus más de 300 noches despejadas al año, altitud privilegiada y una estricta Norma Lumínica que protege sus cielos, ofrecemos una ventana prístina al cosmos. Aquí, la ciencia de observatorios de vanguardia y la sabiduría ancestral andina se unen para ofrecer una experiencia inolvidable.",
+    "stats": {
+      "nights": ">300",
+      "nights_label": "Noches Despejadas / Año",
+      "altitude": ">2.400m",
+      "altitude_label": "Sobre el nivel del mar",
+      "telescopes": "16''",
+      "telescopes_label": "Telescopios Profesionales"
+    }
+  },
+  "tours": {
+    "title": "Nuestras Experiencias Cósmicas",
+    "premium": {
+      "title": "Tour Científico Premium",
+      "description": "Una inmersión profunda en el cosmos con enfoque científico y confort de lujo.",
+      "features": {
+        "0": "Observación con telescopios de 16 pulgadas",
+        "1": "Guía experto en astronomía",
+        "2": "Astrofotografía de retrato profesional",
+        "3": "Copa de vino y catering premium",
+        "4": "Grupos reducidos y exclusivos"
+      }
+    },
+    "cultural": {
+      "title": "Tour Cosmovisión Andina",
+      "description": "Conéctate con el universo a través de la sabiduría de los pueblos originarios.",
+      "features": {
+        "0": "Interpretación del cielo según la cultura Lickanantay",
+        "1": "Relatos y leyendas ancestrales",
+        "2": "Observación a ojo desnudo de constelaciones andinas",
+        "3": "Bebidas calientes y snacks locales",
+        "4": "Guiado por miembros de la comunidad local"
+      }
+    }
+  },
+  "gallery": {
+    "title": "Tu Recuerdo Digital del Cosmos",
+    "subtitle": "La astrofotografía es el corazón de nuestra experiencia. No solo te llevas un recuerdo, te conviertes en parte del paisaje estelar de Atacama."
+  },
+  "footer": {
+    "location": "San Pedro de Atacama, Chile",
+    "rights": "Todos los derechos reservados.",
+    "contact": "Contáctanos"
+  },
+  "calendar": {
+    "title": "Calendario Lunar para Observación",
+    "section_title": "Planifica Tu Noche Perfecta",
+    "description": "Las mejores noches para la observación de estrellas son cerca de la Luna Nueva. Usa nuestro calendario para encontrar los cielos más oscuros y reserva tu tour.",
+    "optimal_day": "Noche Óptima",
+    "weekdays": {
+      "sun": "Dom", 
+      "mon": "Lun", 
+      "tue": "Mar", 
+      "wed": "Mié", 
+      "thu": "Jue", 
+      "fri": "Vie", 
+      "sat": "Sáb"
+    }
+  }
+}

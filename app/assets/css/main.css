@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: #000033; /* Azul Índigo Profundo */
+    --color-surface: rgba(
+      15,
+      23,
+      42,
+      0.3
+    ); /* Un azul-grisáceo oscuro para superficies */
+    --color-primary: #e2e8f0; /* Texto principal - un blanco suave */
+    --color-secondary: #94a3b8; /* Texto secundario - gris azulado */
+    --color-accent-start: #f59e0b; /* Amarillo Dorado (Amber 500) */
+    --color-accent-end: #ea580c; /* Naranja Quemado (Orange 600) */
+    --color-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: translateX(0) translateY(0) rotate(45deg);
+    opacity: 1;
+    width: 2px;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(500px) translateY(500px) rotate(45deg);
+    opacity: 0;
+    width: 100px;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle linear infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 6s ease infinite;
+}
+
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 2px white;
+  animation: shooting-star linear infinite;
+}
+
+.shooting-star::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, white, transparent);
+}
+
+/* Mejoras para móviles */
+@media (max-width: 768px) {
+  .shooting-star {
+    display: none;
+  }
+}
+
+/* Efectos de hover mejorados */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar animation */
+nav {
+  transition: all 0.3s ease;
+}
+
+/* Section spacing */
+section {
+  scroll-margin-top: 100px;
+}
+
+/* Improved card hover effects */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient text animation improvements */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 6s ease infinite;
+}
+
