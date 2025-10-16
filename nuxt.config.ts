@@ -2,7 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-01-01",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "@nuxtjs/robots"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/i18n",
+    "@nuxtjs/robots",
+    "@nuxt/icon",
+  ],
   css: ["~/assets/css/main.css"],
   i18n: {
     locales: [
@@ -11,16 +16,5 @@ export default defineNuxtConfig({
       { code: "pt", file: "pt.json", name: "Português" },
     ],
     defaultLocale: "es",
-  },
-  build: {
-    transpile: ["oh-vue-icons"],
-  },
-  vite: {
-    optimizeDeps: {
-      exclude: ["oh-vue-icons/icons"],
-    },
-    ssr: {
-      noExternal: ["oh-vue-icons"],
-    },
   },
 });

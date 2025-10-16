@@ -51,7 +51,7 @@
                 class="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center"
               >
                 <div class="text-center text-[var(--color-secondary)]">
-                  <v-icon
+                  <Icon
                     name="hi-globe-americas"
                     class="w-24 h-24 mx-auto opacity-60"
                   />
@@ -76,7 +76,7 @@
               <div
                 class="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
               >
-                <v-icon name="oi-telescope" class="w-10 h-10 text-white" />
+                <Icon name="mdi:telescope" class="w-10 h-10 text-white" />
               </div>
               <h3 class="text-2xl font-bold mb-4 text-[var(--color-primary)]">
                 {{ $t("experience.science_title") }}
@@ -95,7 +95,7 @@
               <div
                 class="w-20 h-20 bg-gradient-to-br from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
               >
-                <v-icon name="wi-stars" class="w-10 h-10 text-white" />
+                <Icon name="wi-stars" class="w-10 h-10 text-white" />
               </div>
               <h3 class="text-2xl font-bold mb-4 text-[var(--color-primary)]">
                 {{ $t("experience.ancestral_title") }}
@@ -140,7 +140,7 @@
                   :key="index"
                   class="flex items-center text-[var(--color-secondary)]"
                 >
-                  <v-icon name="hi-check" class="w-5 h-5 text-[var(--color-accent-start)] mr-3" />
+                  <Icon name="heroicons:check" class="w-5 h-5 text-[var(--color-accent-start)] mr-3" />
                   {{ $t(`tours.premium.features.${index - 1}`) }}
                 </li>
               </ul>
@@ -165,7 +165,7 @@
                   :key="index"
                   class="flex items-center text-[var(--color-secondary)]"
                 >
-                  <v-icon name="hi-check" class="w-5 h-5 text-[var(--color-accent-start)] mr-3" />
+                  <Icon name="heroicons:check" class="w-5 h-5 text-[var(--color-accent-start)] mr-3" />
                   {{ $t(`tours.cultural.features.${index - 1}`) }}
                 </li>
               </ul>
@@ -203,7 +203,7 @@
               class="aspect-square bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] hover-lift flex items-center justify-center"
             >
               <div class="text-center text-[var(--color-secondary)]">
-                <v-icon name="bi-image-alt" class="w-12 h-12 mx-auto mb-2 opacity-60" />
+                <Icon name="bi-image-alt" class="w-12 h-12 mx-auto mb-2 opacity-60" />
                 <p class="text-sm">Astro Photo {{ i }}</p>
               </div>
             </div>

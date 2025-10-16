@@ -1,64 +1,83 @@
 <template>
-  <div
-    class="bg-[var(--color-surface)] rounded-3xl p-6 border border-[var(--color-border)] w-full max-w-md mx-auto"
-  >
-    <!-- Header de Navegación -->
-    <div class="flex justify-between items-center mb-4">
-      <button
-        @click="prevMonth"
-        class="p-2 rounded-full hover:bg-white/10 transition-colors"
-      >
-        <v-icon name="hi-chevron-left" />
-      </button>
-      <div class="text-lg font-semibold capitalize">
-        {{ currentMonthYear }}
-      </div>
-      <button
-        @click="nextMonth"
-        class="p-2 rounded-full hover:bg-white/10 transition-colors"
-      >
-        <v-icon name="hi-chevron-right" />
-      </button>
-    </div>
+  <section id="calendar" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Columna de Texto -->
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl sm:text-5xl font-bold mb-6">
+            {{ $t("calendar.section_title") }}
+          </h2>
+          <p
+            class="text-lg text-[var(--color-secondary)] max-w-md mx-auto md:mx-0"
+          >
+            {{ $t("calendar.description") }}
+          </p>
+        </div>
 
-    <!-- Días de la semana -->
-    <div
-      class="grid grid-cols-7 gap-1 text-center text-sm text-[var(--color-secondary)] mb-2"
-    >
-      <div v-for="day in weekdays" :key="day">{{ day }}</div>
-    </div>
-
-    <!-- Días del mes -->
-    <div class="grid grid-cols-7 gap-1">
-      <div
-        v-for="(day, index) in calendarDays"
-        :key="index"
-        class="relative group flex flex-col items-center justify-center aspect-square rounded-lg transition-colors text-sm"
-        :class="{
-          'text-[var(--color-secondary)]/30': !day.isCurrentMonth,
-          'bg-white/10': day.isToday && day.isCurrentMonth,
-          'border-2 border-[var(--color-accent-start)]': day.isOptimal,
-          'cursor-pointer hover:bg-white/5': day.isCurrentMonth,
-        }"
-      >
-        <span class="absolute top-1 right-2 text-xs">{{
-          day.date.getDate()
-        }}</span>
-        <span class="text-4xl">{{ day.emoji }}</span>
-
-        <!-- Tooltip para Noche Óptima -->
+        <!-- Columna del Calendario -->
         <div
-          v-if="day.isOptimal"
-          class="absolute bottom-full mb-2 w-max bg-[var(--color-background)] text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg"
+          class="bg-[var(--color-surface)] rounded-3xl p-6 border border-[var(--color-border)] w-full max-w-md mx-auto"
         >
-          {{ $t("calendar.optimal_day") }}
+          <!-- Header de Navegación -->
+          <div class="flex justify-between items-center mb-4">
+            <button
+              @click="prevMonth"
+              class="p-2 rounded-full hover:bg-white/10 transition-colors"
+            >
+              <Icon name="heroicons:chevron-left" class="w-6 h-6" />
+            </button>
+            <div class="text-lg font-semibold capitalize">
+              {{ currentMonthYear }}
+            </div>
+            <button
+              @click="nextMonth"
+              class="p-2 rounded-full hover:bg-white/10 transition-colors"
+            >
+              <Icon name="heroicons:chevron-right" class="w-6 h-6" />
+            </button>
+          </div>
+
+          <!-- Días de la semana -->
           <div
-            class="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-[var(--color-background)]"
-          ></div>
+            class="grid grid-cols-7 gap-1 text-center text-sm text-[var(--color-secondary)] mb-2"
+          >
+            <div v-for="day in weekdays" :key="day">{{ day }}</div>
+          </div>
+
+          <!-- Días del mes -->
+          <div class="grid grid-cols-7 gap-1">
+            <div
+              v-for="(day, index) in calendarDays"
+              :key="index"
+              class="relative group flex flex-col items-center justify-center aspect-square rounded-lg transition-colors text-sm"
+              :class="{
+                'text-[var(--color-secondary)]/30': !day.isCurrentMonth,
+                'bg-white/10': day.isToday && day.isCurrentMonth,
+                'border-2 border-[var(--color-accent-start)]': day.isOptimal,
+                'cursor-pointer hover:bg-white/5': day.isCurrentMonth,
+              }"
+            >
+              <span class="absolute top-1 right-2 text-xs">{{
+                day.date.getDate()
+              }}</span>
+              <span class="text-4xl">{{ day.emoji }}</span>
+
+              <!-- Tooltip para Noche Óptima -->
+              <div
+                v-if="day.isOptimal"
+                class="absolute bottom-full mb-2 w-max bg-[var(--color-background)] text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg"
+              >
+                {{ $t("calendar.optimal_day") }}
+                <div
+                  class="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-[var(--color-background)]"
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -100,18 +119,17 @@ const calendarDays = computed(() => {
 
   // Días del mes anterior
   for (let i = startDayOfWeek; i > 0; i--) {
-    const date = new Date(year, month, 1 - i);
+        const date = new Date(year, month, 1 - i);
     days.push({
-      date,
-      emoji: Moon.lunarPhaseEmoji(date),
-      isCurrentMonth: false,
+          date,
+          emoji: Moon.lunarPhaseEmoji(date),      isCurrentMonth: false,
     });
   }
 
   // Días del mes actual
   for (let i = 1; i <= daysInMonth; i++) {
     const date = new Date(year, month, i);
-    const moonPhase = Moon.lunarAge(date);
+    const moonPhase = Moon.lunarPhase(date);
     days.push({
       date,
       emoji: Moon.lunarPhaseEmoji(date),
@@ -148,3 +166,4 @@ const nextMonth = () => {
   );
 };
 </script>
+
