@@ -19,6 +19,12 @@
   }
 }
 
+@layer components {
+  .container {
+    @apply xl:px-20 2xl:px-40;
+  }
+}
+
 @keyframes twinkle {
   0% {
     opacity: 0.2;

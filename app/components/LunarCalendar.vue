@@ -1,6 +1,6 @@
 <template>
   <section id="calendar" class="py-20">
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-6 md:px-10">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <!-- Columna de Texto -->
         <div class="text-center md:text-left">

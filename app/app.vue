@@ -11,13 +11,13 @@
         id="about"
         class="pt-28 pb-20 bg-[var(--color-surface)]/30 backdrop-blur-sm"
       >
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-6 md:px-10">
           <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16">
             {{ $t("about.title") }}
           </h2>
 
           <div
-            class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto"
+            class="grid md:grid-cols-2 gap-12 items-center"
           >
             <div>
               <p
@@ -64,7 +64,7 @@
 
       <!-- Dual Experience Section -->
       <section class="py-20">
-        <div class="max-w-6xl mx-auto px-6">
+        <div class="container mx-auto px-6 md:px-10">
           <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16">
             {{ $t("experience.title") }}
           </h2>
@@ -115,7 +115,7 @@
         id="tours"
         class="py-20 bg-[var(--color-surface)]/30 backdrop-blur-sm"
       >
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-6 md:px-10">
           <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16">
             {{ $t("tours.title") }}
           </h2>
@@ -140,7 +140,10 @@
                   :key="index"
                   class="flex items-center text-[var(--color-secondary)]"
                 >
-                  <Icon name="heroicons:check" class="w-5 h-5 text-[var(--color-accent-start)] mr-3" />
+                  <Icon
+                    name="heroicons:check"
+                    class="w-5 h-5 text-[var(--color-accent-start)] mr-3"
+                  />
                   {{ $t(`tours.premium.features.${index - 1}`) }}
                 </li>
               </ul>
@@ -165,7 +168,10 @@
                   :key="index"
                   class="flex items-center text-[var(--color-secondary)]"
                 >
-                  <Icon name="heroicons:check" class="w-5 h-5 text-[var(--color-accent-start)] mr-3" />
+                  <Icon
+                    name="heroicons:check"
+                    class="w-5 h-5 text-[var(--color-accent-start)] mr-3"
+                  />
                   {{ $t(`tours.cultural.features.${index - 1}`) }}
                 </li>
               </ul>
@@ -186,7 +192,7 @@
 
       <!-- Gallery Section -->
       <section id="gallery" class="py-20">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-6 md:px-10">
           <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4">
             {{ $t("gallery.title") }}
           </h2>
@@ -196,14 +202,17 @@
             {{ $t("gallery.subtitle") }}
           </p>
 
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div
               v-for="i in 6"
               :key="i"
               class="aspect-square bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] hover-lift flex items-center justify-center"
             >
               <div class="text-center text-[var(--color-secondary)]">
-                <Icon name="bi-image-alt" class="w-12 h-12 mx-auto mb-2 opacity-60" />
+                <Icon
+                  name="bi-image-alt"
+                  class="w-12 h-12 mx-auto mb-2 opacity-60"
+                />
                 <p class="text-sm">Astro Photo {{ i }}</p>
               </div>
             </div>
@@ -213,15 +222,17 @@
 
       <!-- CTA Section -->
       <section id="contact" class="py-20 text-center">
-        <div class="max-w-2xl mx-auto px-6">
-          <h2 class="text-3xl sm:text-4xl font-bold mb-8">
-            {{ $t("cta_title") }}
-          </h2>
-          <button
-            class="relative bg-gradient-to-r from-[var(--color-accent-start)] to-[var(--color-accent-end)] hover:from-yellow-600 hover:to-amber-700 text-white font-bold py-5 px-12 rounded-2xl text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-amber-500/50 group overflow-hidden"
-          >
-            <span class="relative z-10">{{ $t("cta") }}</span>
-          </button>
+        <div class="container mx-auto px-6 md:px-10">
+          <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8">
+              {{ $t("cta_title") }}
+            </h2>
+            <button
+              class="relative bg-gradient-to-r from-[var(--color-accent-start)] to-[var(--color-accent-end)] hover:from-yellow-600 hover:to-amber-700 text-white font-bold py-5 px-12 rounded-2xl text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-amber-500/50 group overflow-hidden"
+            >
+              <span class="relative z-10">{{ $t("cta") }}</span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -229,8 +240,8 @@
       <footer
         class="py-12 text-center border-t border-[var(--color-border)] bg-[var(--color-surface)]/30"
       >
-        <div class="container mx-auto px-4">
-          <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 items-center">
+        <div class="container mx-auto px-6 md:px-10">
+          <div class="grid md:grid-cols-3 gap-8 items-center">
             <div class="text-left">
               <h3 class="text-lg font-bold text-[var(--color-primary)] mb-2">
                 {{ $t("title") }}
@@ -273,3 +284,4 @@ const stats = computed(() => [
   },
 ]);
 </script>
+
