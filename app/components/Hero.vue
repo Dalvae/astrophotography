@@ -8,7 +8,7 @@
       class="absolute inset-0 bg-gradient-to-t from-[var(--color-background)] via-transparent to-transparent"
     ></div>
 
-    <div class="relative z-10 max-w-4xl mx-auto px-6 md:px-10">
+    <div class="relative z-10 container mx-auto max-w-4xl">
       <h1
         class="text-5xl sm:text-7xl md:text-8xl font-black mb-6 tracking-tight animate-fade-in-down"
         style="animation-delay: 0.2s"

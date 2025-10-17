@@ -11,17 +11,15 @@
         id="about"
         class="pt-28 pb-20 bg-[var(--color-surface)]/30 backdrop-blur-sm"
       >
-        <div class="container mx-auto px-6 md:px-10">
+        <div class="container mx-auto">
           <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16">
             {{ $t("about.title") }}
           </h2>
 
-          <div
-            class="grid md:grid-cols-2 gap-12 items-center"
-          >
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p
-                class="text-lg text-[var(--color-secondary)] leading-relaxed mb-8"
+                class="text-lg text-[var(--color-secondary)] leading-relaxed mb-8 text-justify"
               >
                 {{ $t("about.content") }}
               </p>
@@ -64,7 +62,7 @@
 
       <!-- Dual Experience Section -->
       <section class="py-20">
-        <div class="container mx-auto px-6 md:px-10">
+        <div class="container mx-auto">
           <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16">
             {{ $t("experience.title") }}
           </h2>
@@ -82,7 +80,7 @@
                 {{ $t("experience.science_title") }}
               </h3>
               <p
-                class="text-[var(--color-secondary)] text-base leading-relaxed"
+                class="text-[var(--color-secondary)] text-base leading-relaxed text-justify"
               >
                 {{ $t("experience.science_description") }}
               </p>
@@ -101,7 +99,7 @@
                 {{ $t("experience.ancestral_title") }}
               </h3>
               <p
-                class="text-[var(--color-secondary)] text-base leading-relaxed"
+                class="text-[var(--color-secondary)] text-base leading-relaxed text-justify"
               >
                 {{ $t("experience.ancestral_description") }}
               </p>
@@ -115,12 +113,12 @@
         id="tours"
         class="py-20 bg-[var(--color-surface)]/30 backdrop-blur-sm"
       >
-        <div class="container mx-auto px-6 md:px-10">
+        <div class="container mx-auto">
           <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16">
             {{ $t("tours.title") }}
           </h2>
 
-          <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8 mx-auto">
             <!-- Premium Tour -->
             <div
               class="bg-[var(--color-surface)] rounded-3xl p-8 border border-[var(--color-border)] hover-lift"
@@ -181,18 +179,20 @@
       </section>
 
       <!-- Lunar Calendar Section -->
-      <section id="calendar" class="py-20">
-        <ClientOnly>
-          <LunarCalendar />
-          <template #fallback>
-            <LunarCalendarPlaceholder />
-          </template>
-        </ClientOnly>
+      <section id="calendar" class="py-28">
+        <div class="container mx-auto">
+          <ClientOnly>
+            <LunarCalendar />
+            <template #fallback>
+              <LunarCalendarPlaceholder />
+            </template>
+          </ClientOnly>
+        </div>
       </section>
 
       <!-- Gallery Section -->
       <section id="gallery" class="py-20">
-        <div class="container mx-auto px-6 md:px-10">
+        <div class="container mx-auto">
           <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4">
             {{ $t("gallery.title") }}
           </h2>
@@ -222,9 +222,9 @@
 
       <!-- CTA Section -->
       <section id="contact" class="py-20 text-center">
-        <div class="container mx-auto px-6 md:px-10">
+        <div class="container mx-auto">
           <div class="max-w-2xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-8">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12">
               {{ $t("cta_title") }}
             </h2>
             <button
@@ -240,7 +240,7 @@
       <footer
         class="py-12 text-center border-t border-[var(--color-border)] bg-[var(--color-surface)]/30"
       >
-        <div class="container mx-auto px-6 md:px-10">
+        <div class="container mx-auto">
           <div class="grid md:grid-cols-3 gap-8 items-center">
             <div class="text-left">
               <h3 class="text-lg font-bold text-[var(--color-primary)] mb-2">
@@ -284,4 +284,3 @@ const stats = computed(() => [
   },
 ]);
 </script>
-

@@ -1,6 +1,6 @@
 <template>
   <nav class="fixed top-0 w-full z-50 bg-[var(--color-surface)] backdrop-blur-sm border-b border-[var(--color-border)]">
-    <div class="container mx-auto px-6 md:px-10 py-4">
+    <div class="container mx-auto py-4">
       <div class="flex justify-between items-center">
         <div class="text-2xl font-bold text-[var(--color-primary)]">
           {{ $t("title") }}
